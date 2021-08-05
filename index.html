@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>WEB1 - Welcome</title>
+  <title>we love f1f</title>
   <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -10,20 +10,44 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-KR1R75E4F9');
+  function nigth_bay_handler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor = 'gray';
+      var alist = document.querySelectorAll('a');
+      for(i=0; i<alist.length; i++){
+        alist[i].style.color = 'powderblue';  
+      }
+      self.value = 'day';
+    } else{
+      target.style.backgroundColor = 'cornsilk';
+      self.value = 'night';
+      var alist = document.querySelectorAll('a');
+      for(i=0; i<alist.length; i++){
+        alist[i].style.color = 'blue';
+      }
+    }
+  }
 </script>
 </head>
+
+
 <body>
-  <h1><a href="index.html">f1</a></h1>
+  <div id="title">
+    <h1><a href="index.html">f1</a></h1>
+    <input type="button" value="night" onClick="
+    nigth_bay_handler(this);
+    ">
+  </div>
   <div id="grid">
     <ol>
       <li><a href="1.html">선수</a></li>
-      <li><a href="2.html">팀</a></li>
+      <li><a href="2.html">f1 창가 팀</a></li>
       <li><a href="3.html">2021시즌 경기</a></li>
     </ol>
     <div id="article">
-      <h2>WEB</h2>
+      <a href=""><h2>f1</h2></a>
       <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are
         identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the
         Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser
@@ -33,6 +57,8 @@
       </p>
     </div>
   </div>
+  
+  
   <p>
   <div id="disqus_thread"></div>
   <script>
