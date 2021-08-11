@@ -20,15 +20,12 @@ button a {
   text-decoration: none;
   font-size: 270%;
 }
-#title {
-  border-bottom: 7px solid pink;
-}
 h1 {
   text-align: center;
   font-size: 50px;
   margin-top: 10;
 }
-#title a {
+a {
   text-decoration: none;
 }
 ol li {
@@ -43,6 +40,7 @@ ol li {
   border-right: 7px solid pink;
 }
 #grid {
+  border-top: 7px solid pink;
   display: grid;
   grid-template-columns: 200px 1fr; /*1fr은 앞거 나머지 1fr 1fr은 전체를 둘로 나눈것 중 절반*/
 }
